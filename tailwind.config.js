@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         'my-color': '#e8096e',
       },
+      fontFamily: {
+        'my-font': 'Raleway',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
