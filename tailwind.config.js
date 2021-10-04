@@ -8,6 +8,10 @@ module.exports = {
     extend: {
       colors: {
         'my-color': '#e8096e',
+        'my-color2': 'rgba(79,153,52,0.51)',
+      },
+      screens: {
+        media: { min: '600px', max: '800px' },
       },
       fontFamily: {
         'my-font': 'Raleway',
