@@ -11,3 +11,18 @@ title: Galerie
         Contenu dialogue
     </dialog>
 </div>
+
+<div x-data="{imageUrl:null}">
+    <ul class="flex">
+        <li class="flex-grow"><img src="/static/thumbnails/animals-1.jpeg" alt="un animal"
+          @click="imageUrl = '/static/animals-1.jpeg';" class="w-full"></li>
+        <li class="flex-grow"><img src="/static/thumbnails/animals-2.jpeg" alt="un animal"
+          @click="imageUrl = '/static/animals-2.jpeg';"class="w-full"></li>
+        <li class="flex-grow"><img src="/static/thumbnails/animals-3.jpeg" alt="un animal"
+          @click="imageUrl = '/static/animals-3.jpeg';" class="w-full"></li>
+    </ul>
+
+<div x-show="!!imageUrl" @click.away="imageUrl=null">
+    <img :src="imageUrl" alt="">
+</div>
+</div>
