@@ -3,17 +3,17 @@ layout: base.njk
 title: Galerie
 ---
 
-<div x-data="{open: false}">
-    <button @click="open = !open">
-        Affiche/Cache dialogue
-    </button>
-    <dialog :open="open">
-        Contenu dialogue
-    </dialog>
-</div>
+{#<div x-data="{open: false}">#}
+{#    <button @click="open = !open">#}
+{#        Affiche/Cache dialogue#}
+{#    </button>#}
+{#    <dialog :open="open">#}
+{#        Contenu dialogue#}
+{#    </dialog>#}
+{#</div>#}
 
 <div x-data="{imageUrl:null}">
-    <ul class="flex">
+    <ul class="flex p-6 pb-3">
         <li class="flex-grow"><img src="/static/thumbnails/animals-1.jpeg" alt="un animal"
           @click="imageUrl = '/static/animals-1.jpeg';" class="w-full"></li>
         <li class="flex-grow"><img src="/static/thumbnails/animals-2.jpeg" alt="un animal"
@@ -22,7 +22,7 @@ title: Galerie
           @click="imageUrl = '/static/animals-3.jpeg';" class="w-full"></li>
     </ul>
 
-<div x-show="!!imageUrl" @click.away="imageUrl=null">
-    <img :src="imageUrl" alt="">
+<div class="flex justify-center" x-show="!!imageUrl" @click.away="imageUrl=null">
+    <img class=" w-screen p-6 pt-3" :src="imageUrl" alt="">
 </div>
 </div>
